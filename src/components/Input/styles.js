@@ -22,9 +22,6 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 
-    &:focus {
-      border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
-    }
   }
 
 `;
