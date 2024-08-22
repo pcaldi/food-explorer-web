@@ -26,7 +26,11 @@ export function Header({ isAdmin = false }) {
         />
       </Search>
 
-      <Button title="Novo prato" />
+      {isAdmin ?
+        <Button title="Novo prato" />
+        :
+        <Button title="Pedidos" isCustomer orderCount={0} />
+      }
 
       <Logout>
         <FiLogOut />
