@@ -1,12 +1,12 @@
 import { Container, Brand, Copyright } from "./styles";
 
-import footer from "../../assets/footer.png"
+import footerImg from "../../assets/logo_footer.svg"
 
 export function Footer() {
   return (
     <Container>
       <Brand>
-        <img src={footer} alt="Logo da marcar" />
+        <img src={footerImg} alt="Logo da marcar" />
       </Brand>
       <Copyright>
         <span>

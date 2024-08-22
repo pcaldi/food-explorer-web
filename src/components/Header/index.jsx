@@ -4,19 +4,19 @@ import { Container, Brand, Search, Logout } from "./styles";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
-import brand from "../../assets/brand.png";
-import brandAdmin from "../../assets/brand-admin.png";
+import logoImg from "../../assets/logo.svg";
+import logo_admImg from "../../assets/logo_adm.svg";
 
 import { FiLogOut, FiSearch } from "react-icons/fi"
 
 export function Header({ isAdmin = false }) {
 
-  const logo = isAdmin ? brandAdmin : brand
+  const brand = isAdmin ? logo_admImg : logoImg
 
   return (
     <Container>
       <Brand>
-        <img src={logo} alt="Logo do site" />
+        <img src={brand} alt="Logo do site" />
       </Brand>
 
       <Search>

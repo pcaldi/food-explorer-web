@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  grid-area: footer;
 
   display: flex;
   justify-content: space-between;
@@ -18,13 +17,9 @@ export const Container = styled.footer`
 
 `;
 
-export const Brand = styled.div`
-
-  img {
+export const Brand = styled.image`
     width: 186px;
     height: 30px;
-  }
-
 `;
 
 export const Copyright = styled.div`

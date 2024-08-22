@@ -21,8 +21,11 @@ export const Container = styled.header`
 export const Brand = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
 
+  > img {
+    width: 197px;
+    height: 39px;
+  }
 `;
 
 export const Search = styled.div`
