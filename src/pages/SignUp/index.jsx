@@ -5,6 +5,7 @@ import { Input } from "../../components/Input";
 import { Section } from "../../components/Section";
 
 import logoImg from "../../assets/logo.svg"
+import { Link } from "react-router-dom";
 export function SignUp() {
   return (
     <Container>
@@ -38,7 +39,9 @@ export function SignUp() {
 
         <Button title="Criar conta" />
 
-        <a href="#">Já tenho uma conta</a>
+        <Link to="/">
+          Já tenho uma conta
+        </Link>
       </Form>
 
     </Container>
