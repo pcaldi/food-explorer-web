@@ -5,7 +5,7 @@ import { Input } from "../../components/Input";
 import { Section } from "../../components/Section";
 
 import logoImg from "../../assets/logo.svg"
-export function SignIn() {
+export function SignUp() {
   return (
     <Container>
       <Logo>
@@ -13,12 +13,19 @@ export function SignIn() {
       </Logo>
 
       <Form>
-        <h2>Faça seu login</h2>
+        <h2>Crie sua conta</h2>
+
+        <Section title="Seu Nome">
+          <Input
+            type="text"
+            placeholder="Exemplo: exemplo@exemplo.com.br"
+          />
+        </Section>
 
         <Section title="Email">
           <Input
             type="email"
-            placeholder="Exemplo: exemplo@exemplo.com.br"
+            placeholder="Exemplo: Maria da Silva"
           />
         </Section>
 
@@ -29,9 +36,9 @@ export function SignIn() {
           />
         </Section>
 
-        <Button title="Entrar" />
+        <Button title="Criar conta" />
 
-        <a href="#">Criar uma conta</a>
+        <a href="#">Já tenho uma conta</a>
       </Form>
 
     </Container>
