@@ -5,9 +5,15 @@ import { Container } from "./styles";
 export function QuantityPicker() {
   return (
     <Container>
-      <FiMinus size={24} />
+      <button type="button">
+        <FiMinus />
+      </button>
+
       <span>01</span>
-      <FiPlus size={24} />
+
+      <button type="button">
+        <FiPlus />
+      </button>
     </Container>
   )
 }

@@ -5,14 +5,22 @@ export const Container = styled.div`
   align-items: center;
   gap: 14px;
 
-  color: ${({ theme }) => theme.COLORS.WHITE};
 
-  > span {
+   svg {
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    width: 32px;
+    height: 32px;
+  }
+
+   button {
+    background: transparent;
+    border: none;
+  }
+
+   span {
     color: ${({ theme }) => theme.COLORS.LIGHT_WHITE};
 
-    font-family: 'Roboto';
     font-size: 20px;
     font-weight: 700;
-    line-height: 160%;
   }
 `;
