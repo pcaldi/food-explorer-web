@@ -4,16 +4,16 @@ export const Container = styled.header`
   grid-area: header;
 
   width: 100%;
-  height: 96px;
+  height: 9.6rem;
 
-  padding: 24px 123px;
+  padding: 2.4rem 12.3rem;
   display: flex;
-  gap: 32px;
+  gap: 3.2rem;
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_300};
 
   > button {
-    max-width: 216px;
+    max-width: 21.6rem;
   }
 
 `;
@@ -23,8 +23,8 @@ export const Brand = styled.div`
   align-items: center;
 
   > img {
-    width: 197px;
-    height: 39px;
+    width: 19.7rem;
+    height: 3.9rem;
   }
 `;
 
@@ -32,10 +32,10 @@ export const Search = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 14px;
+  padding: 1.2rem 1.4rem;
   flex-grow: 1;
 
-  border-radius: 5px;
+  border-radius: .5rem;
 
 
 
@@ -46,7 +46,7 @@ export const Search = styled.div`
   }
 
   input {
-    max-width: 300px;
+    max-width: 30.0rem;
     border: none;
   }
 
@@ -57,7 +57,7 @@ export const Logout = styled.button`
   border: none;
 
   color: ${({ theme }) => theme.COLORS.WHITE};
-  font-size: 32px;
+  font-size: 3.2rem;
 
   display: flex;
   align-items: center;

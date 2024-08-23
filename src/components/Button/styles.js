@@ -6,18 +6,18 @@ export const Container = styled.button`
   color: ${({ theme }) => theme.COLORS.WHITE};
 
   border: none;
-  border-radius: 5px;
-  padding: 12px 32px;
+  border-radius: .5rem;
+  padding: 1.2rem 3.2rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: .8rem;
 
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 2.4rem;
 
   &:disabled {
     opacity: 0.5;

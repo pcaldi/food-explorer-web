@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
 
 
-> h2 {
+ h2 {
 
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   font-family: 'Roboto';
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
