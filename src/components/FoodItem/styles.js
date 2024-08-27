@@ -9,10 +9,7 @@ export const Container = styled.div`
 
   border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
 
-  margin-bottom: .8rem;
-  margin-right: 1.6rem;
   border-radius: .8rem;
-  padding-right: 1.6rem;
 
  > button {
     border: none;
@@ -21,11 +18,16 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
-    color: ${({ theme, isNew }) => isNew ? theme.COLORS.GRAY_300 : theme.COLORS.WHITE}
+    color: ${({ theme, isNew }) => isNew ? theme.COLORS.GRAY_300 : theme.COLORS.WHITE};
+
+    > svg {
+      margin-right: .4rem;
+    }
+
   }
 
   > input {
-    width: 100%;
+    width: 11.8rem;
     height: 3.2rem;
 
     padding: 1.0rem 1.6rem;
