@@ -1,32 +1,41 @@
-import { Container } from "./styles";
+import { Container, Dishes } from "./styles";
 
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
-import { FoodCard } from "../../components/FoodCard";
+import bannerImg from "../../assets/banner.png"
+/* import { FoodCard } from "../../components/FoodCard"; */
 
 
 export function Home() {
+
+  /* const data = {
+    "title": "Salada Ravanello",
+    "description": "Uma salada com carne seca, cenoura, tomate, alface, azeitona e orégano.",
+    "price": "48.90"
+  } */
+
   return (
     <Container>
       <Header />
 
-      <FoodCard data={{
-        "title": "Salada Ravanello",
-        "description": "Uma salada com carne seca, cenoura, tomate, alface, azeitona e orégano.",
-        "price": "48.90"
-      }} />
+      <main>
+        <div>
+          <header>
+            <img src={bannerImg} alt="Banner da página" />
 
-      <FoodCard isChecked data={{
-        "title": "Salada Caesar",
-        "description": "Uma salada com carne seca, cenoura, tomate, alface, azeitona e orégano.",
-        "price": "39.90"
-      }} />
+            <div >
+              <h1>Sabores inigualáveis</h1>
+              <p>Sinta o cuidado do preparo com ingredientes selecionados</p>
+            </div>
+          </header>
 
-      <FoodCard isAdmin data={{
-        "title": "Salada Caesar",
-        "description": "Uma salada com carne seca, cenoura, tomate, alface, azeitona e orégano.",
-        "price": "39.90"
-      }} />
+          <Dishes>
+          </Dishes>
+
+        </div>
+
+
+      </main>
 
       <Footer />
     </Container>
