@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   border: none;
-  background: transparent;
+  background: none;
 
   display: flex;
   align-items: center;
@@ -11,8 +11,6 @@ export const Container = styled.button`
 
   font-family: 'Poppins';
   font-size: 2.4rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: 140%;
 
 `;
