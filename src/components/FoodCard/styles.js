@@ -44,16 +44,16 @@ export const Title = styled.div`
   justify-content: center;
   gap: .2rem;
 
-  h2 {
+  > h2 {
+  margin: 0;
   color: ${({ theme }) => theme.COLORS.GRAY_200};
-
   font-family: 'Poppins';
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 140%;
   }
 
-  svg {
+  > svg {
     color: ${({ theme }) => theme.COLORS.GRAY_200};
     width: 2.4rem;
     height: 2.4rem;

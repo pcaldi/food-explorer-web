@@ -7,9 +7,6 @@ export const Container = styled.footer`
   display: flex;
   justify-content: space-between;
 
-  position: absolute;
-  bottom: 0;
-
   width: 100%;
   height: 7.7rem;
 
