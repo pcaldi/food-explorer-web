@@ -38,5 +38,14 @@ body {
     filter: brightness(0.7);
   }
 
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_500};
+    border-radius: 8px;
+  }
+
 
 `;
