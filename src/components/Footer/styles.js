@@ -1,50 +1,48 @@
 import styled from "styled-components";
+
 import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.footer`
   grid-area: footer;
 
-  display: flex;
-  justify-content: space-between;
-
   width: 100%;
   height: 7.7rem;
+  padding: 2.4rem 12.3rem;
 
-  padding: 2.9rem 2.8rem;
-  align-items: center;
+  display: flex;
+  gap: .8rem;
+  justify-content: space-between;
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_300};
 
-  @media (min-width: ${DEVICE_BREAKPOINT.LG}){
-    padding: 2.4rem 12.3rem;
+  @media (max-width: ${DEVICE_BREAKPOINT.LG}){
+    padding: 2.9rem 2.8rem;
   }
 
 `;
 
 export const Brand = styled.image`
-      width: 12rem;
-      height: 1.8rem;
+    width: 18.6rem;
+    display: flex;
+    align-items: center;
 
-    @media (min-width: ${DEVICE_BREAKPOINT.LG}){
-        width: 18.6rem;
-        height: 3.0rem;
-
+    @media (max-width: ${DEVICE_BREAKPOINT.LG}){
+        width: 14.2rem;
     }
 `;
 
 export const Copyright = styled.div`
+  display: flex;
+  align-items: center;
 
-> span {
-  color: ${({ theme }) => theme.COLORS.WHITE};
-
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 160%;
-
-  @media (min-width: ${DEVICE_BREAKPOINT.LG}){
+  > span {
+    color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 1.4rem;
-    }
-}
+    font-weight: 400;
+    line-height: 160%;
+  }
 
-
+   @media (max-width: ${DEVICE_BREAKPOINT.LG}){
+    font-size: 1.2rem;
+  }
 `;

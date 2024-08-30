@@ -22,18 +22,17 @@ export function Edit() {
 
   return (
     <Container>
-      <Header isAdmin />
+      <Header />
       <main>
+        <header>
+          <ButtonText onClick={handleBack}>
+            <FiChevronLeft />
+            voltar
+          </ButtonText>
+
+          <h1>Editar prato</h1>
+        </header>
         <Form>
-          <header>
-            <ButtonText onClick={handleBack}>
-              <FiChevronLeft />
-              voltar
-            </ButtonText>
-
-            <h1>Editar prato</h1>
-          </header>
-
           <Items>
             <Section title="Imagem do prato">
               <Image>

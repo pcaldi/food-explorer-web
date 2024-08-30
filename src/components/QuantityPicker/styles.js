@@ -27,12 +27,22 @@ export const Container = styled.div`
     font-weight: 700;
   }
 
-  @media (min-width: ${DEVICE_BREAKPOINT.LG}) {
+  @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+    width: 100%;
+    gap: 1.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     svg,
     span {
       font-weight: 700;
-      font-size: 2rem;
-      line-height: 160%;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.4rem;
+      height: 1.4rem;
     }
   }
 `;

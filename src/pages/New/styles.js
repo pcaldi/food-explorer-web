@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 9.6rem auto 7.7rem;
+  grid-template-rows: auto;
   grid-template-areas:
     "header"
     "content"
@@ -14,35 +14,38 @@ export const Container = styled.div`
   > main {
     grid-area: content;
     overflow-y: auto;
+
+    margin: 0 auto;
+    gap: 2.4rem;
+    padding: 0 12.5rem 11.6rem 12.5rem;
+
+      > header {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          padding: 4rem 0 2.4rem 0;
+        }
+
+        h1 {
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          line-height: 140%;
+          color: ${({ theme }) => theme.COLORS.GRAY_200};
+          margin-bottom: 3.2rem;
+        }
+      }
   }
 
 `;
 
 export const Form = styled.div`
     display: flex;
-    width: 112.0rem;
     flex-direction: column;
-    gap: 2.4rem;
-
+    width: 112rem;
+    height: 50rem;
     margin: 0 auto;
-
-
-  > header {
-    display: flex;
-    flex-direction: column;
-
-     button {
-      margin-top: 20px;
-    }
-
-    h1 {
-      padding-top: 2.4rem;
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-      line-height: 140%;
-      color: ${({ theme }) => theme.COLORS.GRAY_200};
-    }
-  }
+    gap: 2.4rem;
 
   .ing-price {
     display: flex;
@@ -76,7 +79,6 @@ export const Form = styled.div`
     border-radius: .8rem;
     padding: 1.2rem 1.4rem;
 
-
     &:focus-within {
       outline: .1rem solid ${({ theme }) => theme.COLORS.WHITE};
     }
@@ -91,14 +93,14 @@ export const Form = styled.div`
       padding: 1.2rem 2.4rem;
       background: ${({ theme }) => theme.COLORS.LIGHT_RED};
     }
-
   }
-
 `;
 
 export const Items = styled.div`
+  width: 100%;
   display: flex;
-  gap: 2.4rem;
+  align-items: center;
+  gap: 3.2rem;
 
   section input  {
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
@@ -106,9 +108,8 @@ export const Items = styled.div`
   }
 
   .name {
-    min-width: 46.3rem;
+    width: 46.3rem;
   }
-
 `
 
 export const Image = styled.div`
@@ -161,15 +162,14 @@ export const Image = styled.div`
 `
 
 export const Category = styled.div`
-  width: 100%;
-  min-width: 36.4rem;
+  width: 36.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   > label {
     position: relative;
     width: 100%;
-    padding: 1.2rem 1.6rem;
-    border-radius: .8rem;
-
 
     select {
       border: none;
@@ -194,7 +194,7 @@ export const Category = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_100};
       position: absolute;
       top: 1.2rem;
-      right: -35rem;
+      right: 2rem;
       cursor: pointer;
       pointer-events: none;
       transition: filter 0.2s;

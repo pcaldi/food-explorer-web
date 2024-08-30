@@ -25,15 +25,15 @@ export function New() {
     <Container>
       <Header isAdmin />
       <main>
-        <Form>
-          <header>
-            <ButtonText onClick={handleBack}>
-              <FiChevronLeft />
-              voltar
-            </ButtonText>
+        <header>
+          <ButtonText onClick={handleBack}>
+            <FiChevronLeft />
+            voltar
+          </ButtonText>
 
-            <h1>Adicionar prato</h1>
-          </header>
+          <h1>Adicionar prato</h1>
+        </header>
+        <Form>
 
           <Items>
             <Section title="Imagem do prato">

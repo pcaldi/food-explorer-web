@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.button`
   width: 100%;
@@ -22,5 +23,23 @@ export const Container = styled.button`
   &:disabled {
     opacity: 0.5;
   }
+
+/*   @media (min-width: ${DEVICE_BREAKPOINT.LG}) {
+    padding: .8rem 1.2rem;
+    font-size: 1rem;
+    gap: .4rem;
+  } */
+
+`;
+
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  svg {
+    font-size: 3.2rem;
+  }
+
 
 `;
