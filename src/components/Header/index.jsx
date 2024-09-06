@@ -10,6 +10,7 @@ import logoImg from "../../assets/logo.svg";
 import logo_admImg from "../../assets/logo_adm.svg";
 
 import { FiLogOut, FiSearch } from "react-icons/fi"
+import { useNavigate } from "react-router-dom";
 
 export function Header({ isAdmin = false }) {
 
@@ -17,10 +18,14 @@ export function Header({ isAdmin = false }) {
 
   const { signOut } = useAuth();
 
-
+  const navigate = useNavigate();
 
   function handleLogout() {
     signOut();
+  }
+
+  function handleNewDish() {
+    navigate("/new")
   }
 
   return (
@@ -37,7 +42,7 @@ export function Header({ isAdmin = false }) {
       </Search>
 
       {isAdmin ?
-        <Button title="Novo prato" />
+        <Button title="Novo prato" onClick={handleNewDish} />
         :
         <Button title="Pedidos" isCustomer orderCount={0} />
       }
