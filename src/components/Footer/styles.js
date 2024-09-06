@@ -22,12 +22,17 @@ export const Container = styled.footer`
 `;
 
 export const Brand = styled.image`
-    width: 18.6rem;
     display: flex;
     align-items: center;
 
+    width: 18.6rem;
+    height: 3rem;
+
+
     @media (max-width: ${DEVICE_BREAKPOINT.LG}){
-        width: 14.2rem;
+      width: 14.2rem;
+      height: 1.8rem;
+
     }
 `;
 
@@ -43,6 +48,8 @@ export const Copyright = styled.div`
   }
 
    @media (max-width: ${DEVICE_BREAKPOINT.LG}){
-    font-size: 1.2rem;
+    span {
+      font-size: 1.2rem;
+    }
   }
 `;

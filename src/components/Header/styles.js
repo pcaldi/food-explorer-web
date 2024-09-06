@@ -4,6 +4,7 @@ import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.header`
   width: 100%;
+
   grid-area: header;
 
   padding: 2.4rem  12.3rem;
@@ -20,6 +21,8 @@ export const Container = styled.header`
     align-items: center;
     gap: 3.2rem;
   }
+
+
 
 /*   @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
     width: 100%;
@@ -76,12 +79,10 @@ export const Search = styled.div`
     border: none;
   }
 
- /*  @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
-    input {
-      max-width: 20.0rem;
-    }
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+    display: none;
   }
- */
+
 `;
 
 export const Logout = styled.button`
