@@ -24,7 +24,7 @@ export function Header({ isAdmin = false }) {
     signOut();
   }
 
-  function handleNewDish() {
+  function handleNewPage() {
     navigate("/new")
   }
 
@@ -42,7 +42,7 @@ export function Header({ isAdmin = false }) {
       </Search>
 
       {isAdmin ?
-        <Button title="Novo prato" onClick={handleNewDish} />
+        <Button title="Novo prato" onClick={handleNewPage} />
         :
         <Button title="Pedidos" isCustomer orderCount={0} />
       }
