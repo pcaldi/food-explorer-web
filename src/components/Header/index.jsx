@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Container, Brand, Search, Logout } from "./styles";
 
+import { useAuth } from "../../hooks/auth";
+
 import { Button } from "../Button";
 import { Input } from "../Input";
 
@@ -11,7 +13,15 @@ import { FiLogOut, FiSearch } from "react-icons/fi"
 
 export function Header({ isAdmin = false }) {
 
-  const brand = isAdmin ? logo_admImg : logoImg
+  const brand = isAdmin ? logo_admImg : logoImg;
+
+  const { signOut } = useAuth();
+
+
+
+  function handleLogout() {
+    signOut();
+  }
 
   return (
     <Container>
@@ -32,7 +42,7 @@ export function Header({ isAdmin = false }) {
         <Button title="Pedidos" isCustomer orderCount={0} />
       }
 
-      <Logout>
+      <Logout onClick={handleLogout}>
         <FiLogOut />
       </Logout>
 

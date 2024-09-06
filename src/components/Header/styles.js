@@ -96,7 +96,7 @@ export const Logout = styled.button`
   display: flex;
   align-items: center;
 
-  /* @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     font-size: 2.4rem;
-  } */
+  }
 `;
