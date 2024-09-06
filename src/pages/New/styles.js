@@ -72,7 +72,7 @@ export const Form = styled.div`
     height: 50rem;
     margin: 0 auto;
     gap: 2.4rem;
-    padding-top: 3.2rem;
+    padding: 3.2rem 1rem;
 
   .ing-price {
     display: flex;
@@ -161,6 +161,9 @@ export const Items = styled.div`
 
   .name {
     width: 46.3rem;
+    &:focus-within {
+      outline: .1rem solid ${({ theme }) => theme.COLORS.WHITE};
+    }
   }
 
  /*  @media (max-width: ${DEVICE_BREAKPOINT.LG}){
@@ -247,7 +250,7 @@ export const Image = styled.div`
 `
 
 export const Category = styled.div`
-  width: 36.4rem;
+  width: 32.4rem;
   display: flex;
   align-items: center;
   justify-content: center;

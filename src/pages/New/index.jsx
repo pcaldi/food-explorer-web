@@ -1,23 +1,36 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { FiChevronDown, FiChevronLeft, FiUpload } from "react-icons/fi";
 
 import { Container, Form, Items, Image, Category } from "./styles";
 
-import { FoodItem } from "../../components/FoodItem";
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { Textarea } from "../../components/Textarea";
+import { FoodItem } from "../../components/FoodItem";
 import { ButtonText } from "../../components/ButtonText";
-import { FiChevronDown, FiChevronLeft, FiUpload } from "react-icons/fi";
-import { Button } from "../../components/Button";
-import { Input } from "../../components/Input";
 
 export function New() {
+  const [tags, setTags] = useState([])
+  const [newTag, setNewTag] = useState("");
 
   const navigate = useNavigate();
 
   function handleBack() {
     navigate("/")
+  }
+
+  function handleAddTag() {
+    setTags((prevState) => [...prevState, newTag])
+    setNewTag("");
+  }
+
+  function handleRemoveTag(deleted) {
+    setTags((prevState) => prevState.filter((tag) => tag !== deleted));
   }
 
 
@@ -68,8 +81,22 @@ export function New() {
           <div className="ing-price">
             <Section title="Ingredientes">
               <div className="tags">
-                <FoodItem placeholder="Pão Naann" />
-                <FoodItem placeholder="Adicionar" isNew />
+                {
+                  tags.map((tag, index) => (
+                    <FoodItem
+                      key={String(index)}
+                      value={tag}
+                      onClick={() => handleRemoveTag(tag)}
+                    />
+                  ))
+                }
+                <FoodItem
+                  isNew
+                  placeholder="Adicionar"
+                  value={newTag}
+                  onChange={(e) => setNewTag(e.target.value)}
+                  onClick={handleAddTag}
+                />
               </div>
             </Section>
 
