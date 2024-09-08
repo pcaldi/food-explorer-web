@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { BiPencil } from "react-icons/bi";
 import { FiHeart } from "react-icons/fi";
 import { FaAngleRight } from "react-icons/fa";
@@ -15,27 +18,30 @@ import { QuantityPicker } from "../QuantityPicker"
 
 import saladaImg from "../../assets/salada_ravanello.png"
 
-import { useNavigate } from "react-router-dom";
 
-export function FoodCard({ data, isChecked, ...rest }) {
-
+export function FoodCard({ data, ...rest }) {
+  const [isChecked, setIsChecked] = useState(false);
   const { user } = useAuth();
-
-  const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
-
   const navigate = useNavigate();
 
-  const handlePageEdit = () => {
+  const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
+  const fillHeart = <FiHeart fill={theme.COLORS.GRAY_200} />
+
+
+  function handlePageEdit() {
     navigate(`/edit/${data.id}`);
   }
 
-  const fillHeart = <FiHeart fill={theme.COLORS.GRAY_200} />
+  function handleToggleCheck() {
+    setIsChecked(!isChecked);
+  }
+
 
 
 
   return (
     <Container {...rest}>
-      <IconHeader onClick={isAdmin ? handlePageEdit : undefined}>
+      <IconHeader onClick={isAdmin ? handlePageEdit : handleToggleCheck}>
         {
           isAdmin ? <BiPencil /> : isChecked ? fillHeart : <FiHeart />
         }
