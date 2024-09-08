@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -16,26 +16,22 @@ export const Container = styled.div`
       overflow-y: auto;
 
       margin: 0 auto;
-      gap: 2.4rem;
-      padding: 0 12.5rem 11.6rem 12.5rem;
 
         > header {
           display: flex;
           flex-direction: column;
+          padding-top: 4rem;
+          gap: 2.4rem;
 
-            button {
-              padding: 4rem 0 2.4rem 0;
-            }
+          h1 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            line-height: 140%;
+            color: ${({ theme }) => theme.COLORS.GRAY_200};
 
-            h1 {
-              font-family: "Poppins", sans-serif;
-              font-weight: 500;
-              line-height: 140%;
-              color: ${({ theme }) => theme.COLORS.GRAY_200};
-              margin-bottom: 3.2rem;
-            }
+          }
         }
-  }
+      }
 
 `;
 
@@ -43,9 +39,11 @@ export const Form = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 112rem;
-    max-height: 50.8rem;
+    height: 50rem;
     margin: 0 auto;
     gap: 2.4rem;
+    padding: 3.2rem 1rem;
+
 
   .ing-price {
     display: flex;
@@ -117,6 +115,9 @@ export const Items = styled.div`
 
   .name {
     width: 46.3rem;
+    &:focus-within {
+      outline: .1rem solid ${({ theme }) => theme.COLORS.WHITE};
+    }
   }
 
 `
@@ -171,7 +172,7 @@ export const Image = styled.div`
 `
 
 export const Category = styled.div`
-  width: 36.4rem;
+  width: 32.4rem;
   display: flex;
   align-items: center;
   justify-content: center;

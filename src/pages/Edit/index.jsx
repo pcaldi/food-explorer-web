@@ -2,15 +2,16 @@ import { useNavigate } from "react-router-dom";
 
 import { Container, Form, Items, Image, Category } from "./styles";
 
-import { FoodItem } from "../../components/FoodItem";
+import { FiChevronDown, FiChevronLeft, FiUpload } from "react-icons/fi";
+
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { Textarea } from "../../components/Textarea";
+import { FoodItem } from "../../components/FoodItem";
 import { ButtonText } from "../../components/ButtonText";
-import { FiChevronDown, FiChevronLeft, FiUpload } from "react-icons/fi";
-import { Button } from "../../components/Button";
-import { Input } from "../../components/Input";
 
 export function Edit() {
 

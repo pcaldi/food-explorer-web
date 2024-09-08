@@ -7,22 +7,38 @@ import { Container, Order, IconHeader, Title, Description } from './styles';
 
 import theme from "../../styles/theme"
 
-import { QuantityPicker } from "../QuantityPicker"
+import { useAuth } from "../../hooks/auth";
+import { USER_ROLES } from "../../utils/roles";
+
 import { Button } from "../Button";
+import { QuantityPicker } from "../QuantityPicker"
 
 import saladaImg from "../../assets/salada_ravanello.png"
 
-export function FoodCard({ data, isAdmin, isChecked, ...rest }) {
+import { useNavigate } from "react-router-dom";
+
+export function FoodCard({ data, isChecked, ...rest }) {
+
+  const { user } = useAuth();
+
+  const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
+
+  const navigate = useNavigate();
+
+  const handlePageEdit = () => {
+    navigate(`/edit/${data.id}`);
+  }
 
   const fillHeart = <FiHeart fill={theme.COLORS.GRAY_200} />
 
+
+
   return (
     <Container {...rest}>
-      <IconHeader>
+      <IconHeader onClick={isAdmin ? handlePageEdit : undefined}>
         {
           isAdmin ? <BiPencil /> : isChecked ? fillHeart : <FiHeart />
         }
-
       </IconHeader>
 
       <img src={saladaImg} alt="Imagem de um prato" />
@@ -37,13 +53,14 @@ export function FoodCard({ data, isAdmin, isChecked, ...rest }) {
         <span>R$ {data.price}</span>
       </Description>
 
-      {!isAdmin &&
+      {
+        !isAdmin &&
         <Order>
           <QuantityPicker />
           <Button title="incluir" />
         </Order>
       }
 
-    </Container>
+    </Container >
   );
 }

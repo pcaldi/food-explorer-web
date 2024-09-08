@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
-import { useNavigate } from "react-router-dom";
+
+import { useNavigate, useParams } from "react-router-dom";
 
 import { FiChevronLeft } from "react-icons/fi";
 
@@ -7,29 +7,37 @@ import { Container, Content } from "./styles";
 
 import { Tag } from "../../components/Tag";
 import { Footer } from "../../components/Footer";
+import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
 import { QuantityPicker } from "../../components/QuantityPicker";
 
 import dishImg from "../../assets/salada_ravanello.png"
-import { Button } from "../../components/Button";
 
-export function Dish({ isAdmin }) {
+import { useAuth } from "../../hooks/auth";
+import { USER_ROLES } from "../../utils/roles";
+
+export function Dish() {
 
   const navigate = useNavigate()
+  const { data } = useParams();
+  const { user } = useAuth();
+
+  const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
 
   function handleBack() {
     navigate("/")
   }
 
-  function handleNextPage() {
-    navigate("/edit")
+  const handlePageEdit = () => {
+    navigate(`/edit/${data.id}`);
   }
+
 
 
   return (
     <Container>
-      <Header isAdmin />
+      <Header />
       <main>
 
         <header>
@@ -57,16 +65,16 @@ export function Dish({ isAdmin }) {
 
             </section>
 
-            {isAdmin ?
-              <div className="buttons">
-
-                <QuantityPicker />
-                <Button title="incluir" />
-              </div>
-              :
-              <div className="buttons">
-                <Button title="Editar" onClick={handleNextPage} />
-              </div>
+            {
+              isAdmin ?
+                <div className="buttons">
+                  <Button title="Editar" onClick={handlePageEdit} />
+                </div>
+                :
+                <div className="buttons">
+                  <QuantityPicker />
+                  <Button title="incluir" />
+                </div>
             }
 
           </div>

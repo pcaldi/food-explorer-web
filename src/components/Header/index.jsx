@@ -1,7 +1,8 @@
-/* eslint-disable react/prop-types */
+
 import { Container, Brand, Search, Logout } from "./styles";
 
 import { useAuth } from "../../hooks/auth";
+import { USER_ROLES } from "../../utils/roles";
 
 import { Button } from "../Button";
 import { Input } from "../Input";
@@ -12,15 +13,18 @@ import logo_admImg from "../../assets/logo_adm.svg";
 import { FiLogOut, FiSearch } from "react-icons/fi"
 import { useNavigate } from "react-router-dom";
 
-export function Header({ isAdmin = false }) {
+export function Header() {
+
+  const { signOut, user } = useAuth();
+
+  const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
 
   const brand = isAdmin ? logo_admImg : logoImg;
-
-  const { signOut } = useAuth();
 
   const navigate = useNavigate();
 
   function handleLogout() {
+    navigate("/");
     signOut();
   }
 
@@ -41,10 +45,11 @@ export function Header({ isAdmin = false }) {
         />
       </Search>
 
-      {isAdmin ?
-        <Button title="Novo prato" onClick={handleNewPage} />
-        :
-        <Button title="Pedidos" isCustomer orderCount={0} />
+      {
+        isAdmin ?
+          <Button title="Novo prato" onClick={handleNewPage} />
+          :
+          <Button title="Pedidos" isCustomer orderCount={0} />
       }
 
       <Logout onClick={handleLogout}>

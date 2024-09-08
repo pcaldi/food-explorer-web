@@ -128,6 +128,7 @@ export const Description = styled.div`
     p {
       display: none;
     }
+
     span {
       font-family: 'Roboto';
       font-size: 1.6rem;
