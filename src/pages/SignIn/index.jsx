@@ -23,7 +23,6 @@ export function SignIn() {
 
   }
 
-
   return (
     <Container>
       <Logo>
@@ -33,7 +32,7 @@ export function SignIn() {
       <Form>
         <h2>Faça seu login</h2>
 
-        <Section title="Email">
+        <Section name="Email">
           <Input
             type="email"
             placeholder="Exemplo: exemplo@exemplo.com.br"
@@ -41,7 +40,7 @@ export function SignIn() {
           />
         </Section>
 
-        <Section title="Senha">
+        <Section name="Senha">
           <Input
             type="password"
             placeholder="No mínimo 6 caracteres"

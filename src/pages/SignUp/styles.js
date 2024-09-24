@@ -95,7 +95,7 @@ export const Form = styled.div`
     width: 100%;
     margin-inline: 6.5rem 4.7rem;
 
-    h2 {
+    > h2 {
       display: none;
     }
 
@@ -119,7 +119,7 @@ export const Form = styled.div`
       font-size: 1.2rem;
     }
 
-    a {
+    > a {
       font-size: 1.2rem;
     }
   }

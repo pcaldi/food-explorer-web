@@ -19,9 +19,15 @@ export function SignUp() {
   const navigate = useNavigate();
 
   async function handleSignUp() {
+
+    if (password.length < 6) {
+      return alert("A senha precisa ter no mínimo 6 caracteres.");
+    }
+
     if (!name || !email || !password) {
       return alert("Preencha todos os campos!");
     }
+
 
     await api.post("/users", { email, name, password })
       .then(() => {
@@ -46,7 +52,7 @@ export function SignUp() {
       <Form>
         <h2>Crie sua conta</h2>
 
-        <Section title="Seu Nome">
+        <Section name="Seu Nome">
           <Input
             type="text"
             placeholder="Exemplo: Maria da Silva"
@@ -55,7 +61,7 @@ export function SignUp() {
           />
         </Section>
 
-        <Section title="Email">
+        <Section name="Email">
           <Input
             type="email"
             placeholder="Exemplo: exemplo@exemplo.com.br"
@@ -64,7 +70,7 @@ export function SignUp() {
           />
         </Section>
 
-        <Section title="Senha">
+        <Section name="Senha">
           <Input
             type="password"
             placeholder="No mínimo 6 caracteres"

@@ -12,47 +12,39 @@ export const Container = styled.div`
 
   gap: 30rem;
 
+
   @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
-      margin-inline: 6.5rem 4.7rem;
+      display: flex;
       flex-direction: column;
       justify-content: center;
-
-       gap: 4rem;
-  }
-
-  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin-inline: 6.5rem 4.7rem;
+      gap: 4rem;
 
   }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+    margin: 0 auto;
+  }
+
+
 
 `;
 
 export const Logo = styled.div`
   display: flex;
 
-  img {
+  > img {
     width: 32.4rem;
     height: 4.8rem;
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
 
-    img {
+    > img {
       width: 27.8rem;
+      height: 4.4rem;
     }
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
-
-    img {
-      width: 24.8rem;
-    }
-}
 `;
 
 export const Form = styled.div`
@@ -66,7 +58,6 @@ export const Form = styled.div`
   background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   border-radius: 1.6rem;
-
   > h2 {
     color: ${({ theme }) => theme.COLORS.WHITE};
     text-align: center;
@@ -93,10 +84,9 @@ export const Form = styled.div`
   @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
     width: 100%;
     background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-    width: 100%;
     margin-inline: 6.5rem 4.7rem;
 
-    h2 {
+   > h2 {
       display: none;
     }
 
@@ -107,23 +97,6 @@ export const Form = styled.div`
     }
 
 
-  }
-
-  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-    width: 100%;
-
-    > section input {
-      font-size: 1.2rem;
-    }
-
-    > button {
-      font-size: 1.2rem;
-    }
-
-    a {
-      font-size: 1.2rem;
-    }
   }
 
 `;
