@@ -4,43 +4,91 @@ import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.header`
   width: 100%;
-
   grid-area: header;
 
   padding: 2.4rem  12.3rem;
   display: flex;
+  align-items: center;
   gap: 3.2rem;
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_300};
 
-  > button {
+  .btn {
     display: flex;
     max-width: 21.6rem;
     max-height: 4.8rem;
     justify-content: center;
     align-items: center;
-    gap: 3.2rem;
+    font-size: 1.4rem
   }
 
-
-
-/*   @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
-    width: 100%;
-    gap: 3.2rem;
-    padding: 1.6rem 8.3rem;
+  .fav {
+    display: flex;
+    align-items: center;
 
     > button {
-     max-width: 11.6rem;
-     font-size: 1rem;
-
-    > svg {
-      width: 1.4rem;
-      height: 1.4rem;
+      font-size: 1.6rem;
+      font-weight: 400;
     }
   }
-  } */
 
+  @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+      width: 100%;
+      gap: 2rem;
+      padding: 2.4rem 3rem;
+
+    > .fav {
+      button {
+        font-size: 1.4rem;
+      }
+    }
+
+    > .btn {
+      > button {
+        font-size: 1rem;
+        height: 2rem;
+        padding: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+      gap: 2rem;
+      padding: 2.4rem 3rem;
+
+    > .fav {
+      button {
+        font-size: 1.4rem;
+      }
+    }
+
+    > .btn {
+      > button {
+        font-size: 1rem;
+        height: 2rem;
+        padding: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+      gap: 2rem;
+      padding: 2.4rem 3rem;
+
+    > .fav {
+      button {
+        display: none;
+      }
+    }
+
+    > .btn {
+      > button {
+        display: none;
+      }
+    }
+  }
 `;
+
 
 export const Brand = styled.div`
   display: flex;
@@ -51,12 +99,19 @@ export const Brand = styled.div`
     height: 3.9rem;
   }
 
- /*  @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+    > img {
+      width: 14.7rem;
+      height: 2.9rem;
+    }
+  }
+
+   @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
     > img {
       width: 12.7rem;
       height: 1.9rem;
     }
-  } */
+  }
 `;
 
 export const Search = styled.div`
@@ -79,7 +134,14 @@ export const Search = styled.div`
     border: none;
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+   @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+    input {
+      font-size: 1.4rem;
+    }
+
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
     display: none;
   }
 
@@ -96,7 +158,32 @@ export const Logout = styled.button`
   display: flex;
   align-items: center;
 
-   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    font-size: 2.4rem;
+  @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+    svg {
+      font-size: 2.5rem;
+    }
   }
+
+
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+    svg {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+    svg {
+      display: none;
+    }
+  }
+`;
+
+export const Menu = styled.button`
+  background: transparent;
+  border: none;
+
+  svg {
+    display: none;
+  }
+
 `;

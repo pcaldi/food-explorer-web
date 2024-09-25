@@ -1,19 +1,21 @@
+/* eslint-disable react/prop-types */
 
-import { Container, Brand, Search, Logout } from "./styles";
+import { Container, Brand, Search, Logout, Menu } from "./styles";
 
 import { useAuth } from "../../hooks/auth";
 import { USER_ROLES } from "../../utils/roles";
 
-import { Button } from "../Button";
 import { Input } from "../Input";
+import { Button } from "../Button";
+import { ButtonText } from "../ButtonText";
 
 import logoImg from "../../assets/logo.svg";
 import logo_admImg from "../../assets/logo_adm.svg";
 
-import { FiLogOut, FiSearch } from "react-icons/fi"
+import { FiLogOut, FiSearch, FiMenu } from "react-icons/fi"
 import { useNavigate } from "react-router-dom";
 
-export function Header() {
+export function Header({ setSearch }) {
 
   const { signOut, user } = useAuth();
 
@@ -32,8 +34,16 @@ export function Header() {
     navigate("/new")
   }
 
+  function handleFavoritePage() {
+    navigate("/favorites")
+  }
+
   return (
     <Container>
+      <Menu>
+        <FiMenu />
+      </Menu>
+
       <Brand>
         <img src={brand} alt="Logo do site" />
       </Brand>
@@ -42,14 +52,25 @@ export function Header() {
         <Input
           icon={FiSearch}
           placeholder="Busque por pratos ou ingredientes"
+          onChange={(e) => setSearch(e.target.value)}
         />
       </Search>
 
+      <div className="fav">
+        <ButtonText onClick={handleFavoritePage}>
+          Meus Favoritos
+        </ButtonText>
+      </div>
+
       {
         isAdmin ?
-          <Button title="Novo prato" onClick={handleNewPage} />
+          <div className="btn">
+            <Button title="Novo prato" onClick={handleNewPage} />
+          </div>
           :
-          <Button title="Pedidos" isCustomer orderCount={0} />
+          <div className="btn">
+            <Button title="Pedidos" isCustomer orderCount={0} />
+          </div>
       }
 
       <Logout onClick={handleLogout}>
