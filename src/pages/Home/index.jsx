@@ -1,4 +1,4 @@
-import { Container, Dishes } from "../HomeOriginal/styles";
+import { Container, Dishes } from "./styles";
 
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
@@ -10,7 +10,7 @@ import { Banner } from "../../components/Banner";
 export function Home() {
 
   const data = {
-    "title": "Salada Ravanello",
+    "name": "Salada Ravanello",
     "description": "Uma salada com carne seca, cenoura, tomate, alface, azeitona e orégano.",
     "price": "48.90"
   }

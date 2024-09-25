@@ -2,7 +2,7 @@
 import { PiReceipt } from "react-icons/pi";
 import { Container, Content } from "./styles";
 
-export function Button({ title, loading = false, isCustomer, ...rest }) {
+export function Button({ title, loading = false, isCustomer, orderCount, ...rest }) {
   return (
     <Container
       type="button"
@@ -12,7 +12,7 @@ export function Button({ title, loading = false, isCustomer, ...rest }) {
       <Content>
         {isCustomer && <PiReceipt />}
         {loading ? "Carregando..." : title}
-        {isCustomer && <span>({rest.orderCount})</span>}
+        {isCustomer && <span>({orderCount})</span>}
       </Content>
     </Container>
   )

@@ -11,7 +11,7 @@ export function Slider({ children, ...rest }) {
     <Container {...rest}>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
-        slidesPerView={2}
+        slidesPerView={3}
         centeredSlides={true}
         loop={true}
         navigation={{ clickable: true }}
@@ -24,10 +24,10 @@ export function Slider({ children, ...rest }) {
             slidesPerView: 1.5,
           },
           768: {
-            slidesPerView: 2.5,
+            slidesPerView: 3,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
           }
         }}
       >

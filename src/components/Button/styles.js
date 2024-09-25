@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.button`
-  width: 100%;
   background: ${({ theme }) => theme.COLORS.DARK_RED};
   color: ${({ theme }) => theme.COLORS.WHITE};
 
@@ -25,12 +24,12 @@ export const Container = styled.button`
     opacity: 0.5;
   }
 
-   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+ /*   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     padding: .8rem 1.2rem;
     font-size: 1rem;
     gap: .4rem;
   }
-
+ */
 `;
 
 export const Content = styled.div`
@@ -42,7 +41,7 @@ export const Content = styled.div`
     font-size: 3.2rem;
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+/*   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     svg {
       font-size: 2rem;
     }
@@ -50,7 +49,7 @@ export const Content = styled.div`
     span {
       font-size: 1rem;
     }
-  }
+  } */
 
 
 `;

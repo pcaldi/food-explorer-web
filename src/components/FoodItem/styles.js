@@ -4,10 +4,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  background: ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.GRAY_400};
+  background: ${({ theme, $isNew }) => $isNew ? "transparent" : theme.COLORS.GRAY_400};
 
 
-  border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
+  border: ${({ theme, $isNew }) => $isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
 
   border-radius: .8rem;
 
@@ -18,7 +18,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
 
-    color: ${({ theme, isNew }) => isNew ? theme.COLORS.GRAY_300 : theme.COLORS.WHITE};
+    color: ${({ theme, $isNew }) => $isNew ? theme.COLORS.GRAY_300 : theme.COLORS.WHITE};
 
     > svg {
       margin-right: .4rem;
@@ -37,7 +37,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.WHITE};
 
     &::placeholder {
-      color: ${({ theme, isNew }) => isNew ? theme.COLORS.GRAY_300 : theme.COLORS.WHITE}
+      color: ${({ theme, $isNew }) => $isNew ? theme.COLORS.GRAY_300 : theme.COLORS.WHITE}
     }
 
   }
