@@ -5,15 +5,17 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   max-height: 46.2rem;
+  max-width: 30.4rem;
 
   background:  ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
   display: flex;
-  border-radius: .8rem;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
-  padding: 2.4rem;
+  border-radius: .8rem;
+  justify-content: center;
   position: relative;
 
   img {
@@ -21,16 +23,22 @@ export const Container = styled.div`
     height: 17.6rem;
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+  .btn {
+    background: transparent;
+    border: none;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     display: flex;
-    width: 210px;
-    height: 292px;
-    padding: 24px;
+    width: 21.0rem;
+    height: 29.2rem;
+    padding: 2.4rem;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 1.2rem;
 
     img {
+
       width: 8.8rem;
       height: 8.8rem;
     }
@@ -159,5 +167,16 @@ export const Order = styled.div`
       gap: .8rem;
     }
   }
-
 `;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 2.4rem;
+
+  cursor: pointer;
+`;
+
