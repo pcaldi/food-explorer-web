@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Container } from "./styles";
 
-export function Section({ title, children }) {
+export function Section({ name, children }) {
   return (
     <Container>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
       {children}
     </Container>
   )
