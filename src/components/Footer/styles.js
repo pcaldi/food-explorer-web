@@ -27,6 +27,13 @@ export const Container = styled.footer`
     gap: 19rem;
   }
 
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}){
+    max-width: 42.8rem;
+    gap: .8rem;
+    display: flex;
+    justify-content: center;
+  }
+
 
 `;
 
@@ -65,12 +72,20 @@ export const Copyright = styled.div`
   }
 
    @media (max-width: ${DEVICE_BREAKPOINT.MD}){
-    width: 100%;
+    > span {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}){
     display: flex;
-    min-width: 19rem;
+    align-items: center;
+    justify-content: center;
 
     > span {
       font-size: 0.875rem;
+      min-width: 20rem;
+
     }
   }
 `;

@@ -71,7 +71,9 @@ export const Container = styled.header`
     }
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+      max-width: 42.8rem;
+      max-height: 11.4rem;
       gap: 2rem;
       padding: 2.4rem 3rem;
 
