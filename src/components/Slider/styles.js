@@ -2,13 +2,12 @@ import styled from "styled-components";
 import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.div`
-  width: 100%;
   max-width: 100vw;  // Adicionado para garantir que não ultrapasse a largura da viewport
   margin: 0 auto;
   overflow: hidden;  // Adicionado para conter possíveis overflows
 
   .swiper {
-    padding: 4rem 0;  // Removido padding horizontal
+    padding: 1rem 0;  // Removido padding horizontal
     overflow: visible;  // Permite que os slides fiquem visíveis fora do container
   }
 
