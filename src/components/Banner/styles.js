@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   max-width: 112.2rem;
   width: 100%;
-  height: 26.0rem;
+  height: 26rem;
   margin: 0 auto;
   padding: 0 9.5rem;
 
@@ -21,16 +21,14 @@ export const Container = styled.div`
 
   margin-top: 17.2rem;
 
-  @media (min-width: ${DEVICE_BREAKPOINT.MD}) and (max-width: ${DEVICE_BREAKPOINT.LG}) {
-    padding: 0 5.5rem;
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     width: 94%;
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    height: 12.0rem;
-    padding: 0 2.4rem;
-
-    margin-top: 4.4rem;
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+      width: 32rem;
+      height: 10rem;
+      margin-top: 4.4rem;
   }
 `;
 
@@ -45,19 +43,20 @@ export const Image = styled.div`
   bottom: -.5rem;
   left: -4.1rem;
 
-  @media (min-width: ${DEVICE_BREAKPOINT.MD}) and (max-width: ${DEVICE_BREAKPOINT.LG}) {
+  @media  (max-width: ${DEVICE_BREAKPOINT.MD}) {
     background-size: 42.0rem;
     bottom: -7.0rem;
     left: -10.2rem;
   }
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
     background: url(${bannerMobile}) no-repeat center;
 
-    background-size: 17.9rem;
-    width: 17.3rem;
-    height: 14.9rem;
+    background-size: 12.9rem;
+    width: 12.3rem;
+    height: 12.9rem;
     bottom: -.4rem;
-    left: -2.1rem;
+    left: -1rem;
   }
 `;
 
@@ -65,8 +64,7 @@ export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 76.8rem) {
-    margin-left: 13.0rem;
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
   }
 `;
 
@@ -80,13 +78,22 @@ export const Title = styled.h1`
     font-size: 1.6rem;
     margin-bottom: .3rem;
   }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Description = styled.span`
   color: ${({ theme }) => theme.COLORS.GRAY_200};
   font-size: 1.4rem;
   font-weight: 400;
+
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     font-size: 1.1rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+    font-size: .875rem;
   }
 `;
