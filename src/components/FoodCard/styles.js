@@ -44,6 +44,21 @@ export const Container = styled.div`
     }
   }
 
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+    width: 21.0rem;
+    height: 29.2rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+    img {
+      width: 8.8rem;
+      height: 8.8rem;
+    }
+  }
+
 
 `;
 
@@ -62,9 +77,16 @@ export const IconHeader = styled.button`
   }
 
    @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
-    > svg {
+    div > svg {
       width: 1.6rem;
       height: 1.6rem;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+    div > svg {
+      width: 1rem;
+      height: 1rem;
     }
   }
 
@@ -76,35 +98,53 @@ export const Title = styled.div`
   justify-content: center;
   gap: .2rem;
 
-  > h2 {
-    margin: 0;
-    color: ${({ theme }) => theme.COLORS.GRAY_200};
-    font-family: 'Poppins';
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 140%;
-  }
+     > h3 {
+      margin-bottom: 0;
+      color: ${({ theme }) => theme.COLORS.GRAY_200};
+      font-family: 'Poppins';
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 140%;
+    }
 
-  > svg {
-    color: ${({ theme }) => theme.COLORS.GRAY_200};
-    width: 2.4rem;
-    height: 2.4rem;
-  }
+    div > svg {
+      color: ${({ theme }) => theme.COLORS.GRAY_200};
+      width: 2.4rem;
+      height: 2.4rem;
+    }
 
    @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
-    > h2 {
+    display: flex;
+
+     > h3 {
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 2.4rem;
       font-weight: 500;
       line-height: 2.4rem;
 
       gap: 0;
     }
 
-    > svg {
+    div > svg {
       width: 1rem;
       height: 1rem;
+
     }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+
+
+     > h3 {
+      font-size: 1.2rem;
+      line-height: 0;
+    }
+
+    div > svg {
+      width: .875rem;
+      height: .875rem;
+    }
+
   }
 
 `;
@@ -138,10 +178,7 @@ export const Description = styled.div`
     }
 
     span {
-      font-family: 'Roboto';
       font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 400;
       line-height: 100%;
     }
   }
