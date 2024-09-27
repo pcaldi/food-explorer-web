@@ -26,8 +26,6 @@ export function Dish() {
 
   const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
 
-
-
   function handleBack() {
     navigate(-1)
   }
@@ -74,7 +72,7 @@ export function Dish() {
                     data.ingredients.map(ingredient => (
                       <Tag
                         key={String(ingredient.id)}
-                        title={ingredient.name}
+                        name={ingredient.name}
                       />
                     ))
                   }
