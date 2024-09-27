@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
+import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
+
+export const Container = styled.div`
+  height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
@@ -13,7 +14,7 @@ export const Container = styled.div`
 
     > main {
       grid-area: content;
-      overflow-y: auto;
+      /* overflow-y: auto; */
 
       margin: 0 auto;
 
@@ -23,7 +24,8 @@ export const Container = styled.div`
           padding-top: 4rem;
           gap: 2.4rem;
 
-          h1 {
+
+          > h1 {
             font-family: "Poppins", sans-serif;
             font-weight: 500;
             line-height: 140%;
@@ -31,23 +33,50 @@ export const Container = styled.div`
 
           }
         }
-      }
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+
+          > main {
+            /* max-width: 36.4rem; */
+            padding: 2rem;
+            gap: 2.4rem;
+
+            > header {
+
+              > button {
+                font-size: 1.6rem;
+             }
+
+              > h1 {
+                font-size: 3.2rem;
+              }
+            }
+          }
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+      display: block;
+
+    }
 
 `;
 
+
 export const Form = styled.div`
-    display: flex;
+     display: flex;
     flex-direction: column;
-    max-width: 112rem;
-    height: 50rem;
+    /* max-width: 112rem;
+    height: 50rem; */
     margin: 0 auto;
     gap: 2.4rem;
     padding: 3.2rem 1rem;
 
-
   .ing-price {
+    width: 100%;
     display: flex;
     align-items: center;
+    gap: 2rem;
     justify-content: space-between;
   }
 
@@ -77,7 +106,6 @@ export const Form = styled.div`
     border-radius: .8rem;
     padding: 1.2rem 1.4rem;
 
-
     &:focus-within {
       outline: .1rem solid ${({ theme }) => theme.COLORS.WHITE};
     }
@@ -98,6 +126,74 @@ export const Form = styled.div`
       background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
     }
 
+  }
+  @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
+    width: 100%;
+    /* gap: 1.4rem; */
+
+    .ing-price {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .tags {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+    .ing-price {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .tags {
+     /*  max-width: 30rem; */
+     width: 100%;
+    }
+
+    .wrapper-price {
+      /* min-width: 30rem; */
+      width: 100%;
+     /*  margin-bottom: 2.4rem; */
+    }
+
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 3.2rem;
+
+      > button {
+        width: 100%;
+        padding: 1.2rem 2.4rem;
+      }
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+
+    .tags {
+     /*  max-width: 30rem; */
+     width: 100%;
+      margin-bottom: 0;
+    }
+
+    .wrapper-price {
+      width: 100%;
+
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+
+      /* > button {
+        min-width: 30rem;
+        padding: 1.2rem 3.2rem;
+      } */
+    }
   }
 
 `;
@@ -120,6 +216,26 @@ export const Items = styled.div`
     }
   }
 
+  @media (max-width: ${DEVICE_BREAKPOINT.LG}){
+    gap: 2.4rem;
+
+    section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .name {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const Image = styled.div`
@@ -169,6 +285,28 @@ export const Image = styled.div`
       }
     }
   }
+
+   @media (max-width: ${DEVICE_BREAKPOINT.LG}){
+    padding: .8rem 3.2rem;
+
+    > label {
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        span {
+          font-size: 1.2rem;
+        }
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}){
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 `
 
 export const Category = styled.div`
@@ -215,6 +353,30 @@ export const Category = styled.div`
       }
     }
   }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.LG}){
+    /* width: 30rem;
+    height: 3rem; */
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 2.4rem; */
+
+    select {
+      font-size: 1rem;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+      width: 100%;
+
+    }
+
+
 
 `;
 
