@@ -116,7 +116,7 @@ export function New() {
             voltar
           </ButtonText>
 
-          <h1>Adicionar prato</h1>
+          <h1>Novo prato</h1>
         </header>
         <Form>
 

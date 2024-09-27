@@ -3,9 +3,7 @@ import styled from "styled-components";
 import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.div`
-  width: 100%;
   height: 100vh;
-
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
@@ -15,7 +13,7 @@ export const Container = styled.div`
 
     > main {
       grid-area: content;
-      overflow-y: auto;
+      /* overflow-y: auto; */
 
       margin: 0 auto;
 
@@ -39,10 +37,9 @@ export const Container = styled.div`
     @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
 
           > main {
-            max-width: 36.4rem;
+            /* max-width: 36.4rem; */
             padding: 2rem;
             gap: 2.4rem;
-
 
             > header {
 
@@ -58,11 +55,8 @@ export const Container = styled.div`
     }
 
     @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+      display: block;
 
-          > main {
-            max-width: 36.4rem;
-            padding: 2rem;
-          }
     }
 
 `;
@@ -70,15 +64,17 @@ export const Container = styled.div`
 export const Form = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 112rem;
-    height: 50rem;
+    /* max-width: 112rem;
+    height: 50rem; */
     margin: 0 auto;
     gap: 2.4rem;
     padding: 3.2rem 1rem;
 
   .ing-price {
+    width: 100%;
     display: flex;
     align-items: center;
+    gap: 2rem;
     justify-content: space-between;
   }
 
@@ -118,7 +114,7 @@ export const Form = styled.div`
     justify-content: flex-end;
 
     button {
-      max-width: 17.2rem;
+      width: 17.2rem;
       padding: 1.2rem 2.4rem;
       background: ${({ theme }) => theme.COLORS.LIGHT_RED};
     }
@@ -126,39 +122,43 @@ export const Form = styled.div`
 
    @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
     width: 100%;
-    height: 40rem;
-    gap: 1.4rem;
+    /* gap: 1.4rem; */
 
     .ing-price {
-      justify-content: flex-start;
-      gap: 4rem;
+      width: 100%;
+      display: flex;
+      gap: 2rem;
     }
 
     .tags {
-      width: 60rem;
+      width: 100%;
     }
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     .ing-price {
       flex-direction: column;
+      width: 100%;
     }
 
     .tags {
-      max-width: 30rem;
+     /*  max-width: 30rem; */
+     width: 100%;
     }
 
     .wrapper-price {
-      min-width: 30rem;
-      margin-bottom: 2.4rem;
+      /* min-width: 30rem; */
+      width: 100%;
+     /*  margin-bottom: 2.4rem; */
     }
 
     .btn {
+      width: 100%;
       display: flex;
       justify-content: center;
 
       > button {
-        min-width: 30rem;
+        width: 100%;
         padding: 1.2rem 3.2rem;
       }
     }
@@ -166,9 +166,10 @@ export const Form = styled.div`
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
 
-
     .tags {
-      max-width: 30rem;
+     /*  max-width: 30rem; */
+     width: 100%;
+      margin-bottom: 0;
     }
 
     .wrapper-price {
@@ -180,10 +181,10 @@ export const Form = styled.div`
       display: flex;
       justify-content: center;
 
-      > button {
+      /* > button {
         min-width: 30rem;
         padding: 1.2rem 3.2rem;
-      }
+      } */
     }
   }
 
@@ -346,8 +347,11 @@ export const Category = styled.div`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.LG}){
-    width: 30rem;
-    height: 3rem;
+    /* width: 30rem;
+    height: 3rem; */
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 2.4rem; */
 
     select {
       font-size: 1rem;
@@ -359,12 +363,12 @@ export const Category = styled.div`
     }
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.LG}){
-    width: 30rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 2.4rem;
-  }
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+      width: 100%;
+
+    }
+
+
 
 `;
 
