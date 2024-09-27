@@ -9,18 +9,20 @@ export const Container = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.COLORS.GRAY_200};
 
-   svg {
+   > svg {
     color: ${({ theme }) => theme.COLORS.GRAY_200};
     width: 3.2rem;
     height: 3.2rem;
   }
 
-   button {
+   > button {
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
     background: transparent;
     border: none;
+    margin: 0;
   }
 
-   span {
+   > span {
     color: ${({ theme }) => theme.COLORS.LIGHT_WHITE};
 
     font-size: 2rem;
@@ -34,15 +36,34 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    svg,
-    span {
+
+    > svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    > span {
       font-weight: 700;
       font-size: 1.6rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+    width: 100%;
+    gap: 1.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > svg {
       width: 1.4rem;
       height: 1.4rem;
+    }
+
+    > span {
+      font-weight: 700;
+      font-size: 1.4rem;
     }
   }
 `;
