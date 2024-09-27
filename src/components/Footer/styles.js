@@ -27,17 +27,27 @@ export const Container = styled.footer`
     gap: 19rem;
   }
 
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}){
+    width: 100%;
+    gap: 4rem;
+    padding: 2.4rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+
   @media (max-width: ${DEVICE_BREAKPOINT.XS}){
-    max-width: 42.8rem;
+    width: 100%;
     gap: .8rem;
     display: flex;
     justify-content: center;
   }
 
 
+
+
 `;
 
-export const Brand = styled.image`
+export const Brand = styled.div`
     display: flex;
     align-items: center;
 
@@ -84,8 +94,6 @@ export const Copyright = styled.div`
 
     > span {
       font-size: 0.875rem;
-      min-width: 20rem;
-
     }
   }
 `;
