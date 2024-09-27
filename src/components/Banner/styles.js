@@ -22,13 +22,25 @@ export const Container = styled.div`
   margin-top: 17.2rem;
 
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    width: 94%;
+  /*   width: 94%; */
+    margin-top: 5.4rem;
+  }
+
+
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+      /* width: 32rem; */
+      height: 10rem;
+      /* margin-top: 4.4rem; */
+      padding: 0;
+      padding-left: 11rem;
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
-      width: 32rem;
+      /* width: 32rem; */
       height: 10rem;
-      margin-top: 4.4rem;
+      /* margin-top: 4.4rem; */
+      padding: 0;
+      padding-left: 11rem;
   }
 `;
 
@@ -44,9 +56,20 @@ export const Image = styled.div`
   left: -4.1rem;
 
   @media  (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    background-size: 42.0rem;
+
+    background-size: 41rem;
     bottom: -7.0rem;
     left: -10.2rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+    background: url(${bannerMobile}) no-repeat center;
+
+    background-size: 12.9rem;
+    width: 12.3rem;
+    height: 12.9rem;
+    bottom: -.4rem;
+    left: -1rem;
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
@@ -64,7 +87,9 @@ export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+    /* padding: 2rem; */
+
   }
 `;
 
@@ -75,8 +100,12 @@ export const Title = styled.h1`
   margin-bottom: .8rem;
 
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    font-size: 1.6rem;
-    margin-bottom: .3rem;
+    font-size: 2.6rem;
+   /*  margin-bottom: .3rem; */
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+    font-size: 1.4rem;
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
@@ -90,7 +119,11 @@ export const Description = styled.span`
   font-weight: 400;
 
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+    font-size: .875rem;
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {

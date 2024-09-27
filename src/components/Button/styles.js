@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.button`
+  width: 100%;
+
   background: ${({ theme }) => theme.COLORS.DARK_RED};
   color: ${({ theme }) => theme.COLORS.WHITE};
 
