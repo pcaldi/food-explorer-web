@@ -24,7 +24,7 @@ export const Dishes = styled.div`
   flex-direction: column;
   margin-top: 2rem;
 
- > section h2 {
+ > section > h2 {
     margin-bottom: 0;
     font-size: 2.4rem;
  }
