@@ -19,20 +19,18 @@ export function Slider({ children, ...rest }) {
         pagination={{ clickable: true }}
         breakpoints={{
           0: {
-            slidesPerView: 1,
-            spaceBetween: 10,  // Espaço entre slides no mobile
+            slidesPerView: 0.5,
+            spaceBetween: -60  // Define o espaço entre os slides
+
           },
           480: {
-            slidesPerView: 1.5,
-            spaceBetween: 10,
+            slidesPerView: 1,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 10,
           }
         }}
       >
