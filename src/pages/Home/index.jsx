@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+=======
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 import { Container, Dishes } from "./styles";
 
 import { Footer } from "../../components/Footer";
@@ -14,6 +17,7 @@ import { api } from "../../services/api";
 
 export function Home() {
 
+<<<<<<< HEAD
   const [search, setSearch] = useState("");
   const [dishes, setDishes] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -23,6 +27,12 @@ export function Home() {
 
   function handleDishDetail(id) {
     navigate(`/dish/${id}`);
+=======
+  const data = {
+    "name": "Salada Ravanello",
+    "description": "Uma salada com carne seca, cenoura, tomate, alface, azeitona e orégano.",
+    "price": "48.90"
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
   }
 
 

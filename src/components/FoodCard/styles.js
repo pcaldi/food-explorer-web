@@ -36,6 +36,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
+<<<<<<< HEAD
 
     img {
 
@@ -52,8 +53,11 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
+=======
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 
     img {
+
       width: 8.8rem;
       height: 8.8rem;
     }

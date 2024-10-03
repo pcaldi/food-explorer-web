@@ -60,6 +60,10 @@ export function Edit() {
   }
 
   function handlePriceChange(e) {
+<<<<<<< HEAD
+=======
+    // Permite a digitação do usuário normalmente
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
     setPrice(e.target.value);
   }
 
@@ -191,7 +195,7 @@ export function Edit() {
             voltar
           </ButtonText>
 
-          <h1>Editar prato</h1>
+          <h1>Adicionar prato</h1>
         </header>
         <Form>
 
@@ -200,7 +204,11 @@ export function Edit() {
               <Image>
                 <label htmlFor="image">
                   <FiUpload />
+<<<<<<< HEAD
                   <span>{imageFile || "Selecione imagem"}</span>
+=======
+                  <span>{dish?.image || imageFile || "Selecione imagem"}</span>
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
                   <input
                     id="image"
                     type="file"
@@ -287,11 +295,19 @@ export function Edit() {
 
           <div className="btn">
             <Button
+<<<<<<< HEAD
               title="Excluir"
               onClick={handleRemoveDish}
             />
             <Button
               title="Salvar"
+=======
+              title="Excluir Prato"
+              onClick={handleRemoveDish}
+            />
+            <Button
+              title="Salvar alterações"
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
               onClick={handleEditDish}
             />
           </div>

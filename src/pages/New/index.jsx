@@ -167,7 +167,11 @@ export function New() {
           </Items>
 
           <div className="ing-price">
+<<<<<<< HEAD
             <Section name="Ingredientes" >
+=======
+            <Section name="Ingredientes">
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
               <div className="tags">
                 {
                   tags.map((tag, index) => (
@@ -188,6 +192,7 @@ export function New() {
               </div>
             </Section>
 
+<<<<<<< HEAD
             <Section name="Preço" >
               <div className="wrapper-price">
                 <Input
@@ -198,6 +203,16 @@ export function New() {
                   onBlur={handlePriceBlur}
                 />
               </div>
+=======
+            <Section name="Preço">
+              <Input
+                className="price"
+                placeholder="R$ 00,00"
+                value={price}
+                onChange={handlePriceChange}
+                onBlur={handlePriceBlur}
+              />
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
             </Section>
           </div>
 
@@ -205,7 +220,11 @@ export function New() {
           <Section name="Descrição">
             <Textarea
               placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+<<<<<<< HEAD
               defaultValue={description}
+=======
+              value={description}
+>>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
               onChange={e => setDescription(e.target.value)}
             />
           </Section>
