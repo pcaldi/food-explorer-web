@@ -62,11 +62,7 @@ export function FoodCard({ data, isFavorite, updateFavorite, ...rest }) {
         <img src={foodImage} alt={data.image} />
 
         <Title>
-<<<<<<< HEAD
           <h3>{data.name}</h3>
-=======
-          <h2>{data.name}</h2>
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
           <FaAngleRight />
         </Title>
 
