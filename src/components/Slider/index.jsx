@@ -11,13 +11,8 @@ export function Slider({ children, ...rest }) {
     <Container {...rest}>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
-<<<<<<< HEAD
         slidesPerView={4}
         spaceBetween={-10}  // Define o espaço entre os slides
-=======
-        slidesPerView={3}
-        centeredSlides={true}
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
         loop={true}
         centeredSlides={true}
         navigation={{ clickable: true }}
@@ -32,11 +27,7 @@ export function Slider({ children, ...rest }) {
             slidesPerView: 1,
           },
           768: {
-<<<<<<< HEAD
             slidesPerView: 2,
-=======
-            slidesPerView: 3,
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
           },
           1024: {
             slidesPerView: 4,
