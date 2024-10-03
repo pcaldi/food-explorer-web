@@ -22,18 +22,10 @@ export const Container = styled.div`
   margin-top: 17.2rem;
 
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-<<<<<<< HEAD
   /*   width: 94%; */
     margin-top: 5.4rem;
   }
 
-=======
-    width: 94%;
-  }
-
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    height: 12.0rem;
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 
   @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
       /* width: 32rem; */
@@ -64,21 +56,13 @@ export const Image = styled.div`
   left: -4.1rem;
 
   @media  (max-width: ${DEVICE_BREAKPOINT.MD}) {
-<<<<<<< HEAD
 
     background-size: 41rem;
-=======
-    background-size: 42.0rem;
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
     bottom: -7.0rem;
     left: -10.2rem;
   }
 
-<<<<<<< HEAD
   @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
-=======
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
     background: url(${bannerMobile}) no-repeat center;
 
     background-size: 12.9rem;
@@ -103,13 +87,9 @@ export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
 
-<<<<<<< HEAD
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
     /* padding: 2rem; */
 
-=======
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
   }
 `;
 
