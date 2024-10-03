@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.div`
-<<<<<<< HEAD
-=======
-  width: 100%;
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -27,10 +23,6 @@ export const Container = styled.div`
           padding-top: 4rem;
           gap: 2.4rem;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
           > h1 {
             font-family: "Poppins", sans-serif;
             font-weight: 500;
@@ -39,7 +31,6 @@ export const Container = styled.div`
 
           }
         }
-<<<<<<< HEAD
     }
 
     @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
@@ -67,21 +58,6 @@ export const Container = styled.div`
 
     }
 
-=======
-
-
-        @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-          max-width: 36.3rem;
-          padding: 0 3.2rem;
-          gap: 2.4rem;
-
-          > main > header {
-            padding: 0;
-          }
-        }
-
-      }
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 `;
 
 export const Form = styled.div`
@@ -144,14 +120,8 @@ export const Form = styled.div`
   }
 
    @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
-<<<<<<< HEAD
     width: 100%;
     /* gap: 1.4rem; */
-=======
-    max-width: 90rem;
-    height: 40rem;
-    gap: 1.4rem;
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 
     .ing-price {
       width: 100%;
@@ -160,23 +130,10 @@ export const Form = styled.div`
     }
 
     .tags {
-<<<<<<< HEAD
-=======
-      width: 60rem;
-    }
-  }
-
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-    .ing-price {
-      flex-direction: column;
-    }
-    .tags {
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
       width: 100%;
     }
   }
 
-<<<<<<< HEAD
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     .ing-price {
       flex-direction: column;
@@ -230,8 +187,6 @@ export const Form = styled.div`
     }
   }
 
-=======
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 `;
 
 export const Items = styled.div`
@@ -253,7 +208,6 @@ export const Items = styled.div`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.LG}){
-<<<<<<< HEAD
     gap: 2.4rem;
 
     section {
@@ -262,9 +216,6 @@ export const Items = styled.div`
       flex-direction: column;
       justify-content: flex-start;
     }
-=======
-    gap: 2.2rem;
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 
     .name {
       width: 100%;
@@ -342,15 +293,10 @@ export const Image = styled.div`
     }
   }
 
-<<<<<<< HEAD
   @media (max-width: ${DEVICE_BREAKPOINT.MD}){
     display: flex;
     align-items: center;
     justify-content: flex-start;
-=======
-  @media (max-width: ${DEVICE_BREAKPOINT.LG}){
-    width: 100%;
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
   }
 `
 
@@ -415,7 +361,6 @@ export const Category = styled.div`
       height: 1.5rem;
     }
   }
-<<<<<<< HEAD
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
       width: 100%;
@@ -423,8 +368,6 @@ export const Category = styled.div`
     }
 
 
-=======
->>>>>>> 62dd28a760fc8950cb391fb6e2d8f90ae65487db
 
 `;
 
