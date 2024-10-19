@@ -31,8 +31,7 @@ export const Container = styled.div`
       /* width: 32rem; */
       height: 10rem;
       /* margin-top: 4.4rem; */
-      padding: 0;
-      padding-left: 11rem;
+      /* padding-left: 11rem; */
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
