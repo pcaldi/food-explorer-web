@@ -95,7 +95,7 @@ A aplicação Food Explorer está disponível para uso [aqui](https://web-food-e
 - Senha: 123456
 
 
-### Você também pode executá-la em sua máquina localmente. Certifique-se de ter o ``Node.js`` e o ``npm`` instalados antes de prosseguir com as etapas abaixo:
+### 🎡 Você também pode executá-la em sua máquina localmente. Certifique-se de ter o ``Node.js`` e o ``npm`` instalados antes de prosseguir com as etapas abaixo:
 
 1. Clone o projeto:
 
@@ -120,6 +120,17 @@ $ npm install
 ```
 $ npm run dev
 ```
+
+## 👨🏻‍💻 Autor
+
+<a href="https://github.com/pcaldi">
+ <img style="border-radius: 50%;" src="https://github.com/pcaldi.png" width="100px;" alt=""/>
+ <br />
+ <sub><b>Paulo Caldi</b></sub></a> <a href="https://github.com/pcaldi" title="emoji">🙋🏻</a>
+ <br />
+
+[![LinkedIn Badge](https://img.shields.io/badge/-Paulo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/pcaldi/)](https://www.linkedin.com/in/pcaldi/)
+[![GMail Badge](https://img.shields.io/badge/-pcaldi@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pcaldi@gmail.com)](mailto:pcaldi@gmail.com)
 
 
 
