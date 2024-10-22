@@ -12,6 +12,8 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
+    width: 100%;
+   /*  padding: 2.4rem; */
   }
 
 `;
@@ -19,7 +21,7 @@ export const Container = styled.div`
 export const Dishes = styled.div`
   max-width: 112.2rem;
   margin: 0 auto;
-  padding: 2.4rem;
+  /* padding: 2.4rem; */
   display: flex;
   flex-direction: column;
   margin-top: 2rem;

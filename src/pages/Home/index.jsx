@@ -9,6 +9,8 @@ import { Header } from "../../components/Header";
 import { Banner } from "../../components/Banner";
 import { Section } from "../../components/Section";
 import { FoodCard } from "../../components/FoodCard";
+import { DropMenu } from "../../components/DropMenu";
+
 
 import { api } from "../../services/api";
 
@@ -17,6 +19,7 @@ export function Home() {
   const [search, setSearch] = useState("");
   const [dishes, setDishes] = useState([]);
   const [favorites, setFavorites] = useState([]);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const navigate = useNavigate();
 
@@ -67,11 +70,18 @@ export function Home() {
 
   return (
     <Container>
-      <Header setSearch={setSearch} />
+      <Header
+        setSearch={setSearch}
+        onOpenMenu={() => setMenuIsOpen(true)}
+      />
+
+      <DropMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
 
       <main>
         <Banner />
-
         <Dishes>
           <Section name="Refeição">
             <Slider >
