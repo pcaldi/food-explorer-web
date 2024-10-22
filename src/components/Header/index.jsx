@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { Container, Brand, Search, Logout, Menu } from "./styles";
+import { Container, Brand, Search, Logout, MenuButton } from "./styles";
 
 import { useAuth } from "../../hooks/auth";
 import { USER_ROLES } from "../../utils/roles";
@@ -9,19 +9,22 @@ import { Input } from "../Input";
 import { Button } from "../Button";
 import { ButtonText } from "../ButtonText";
 
-import logoImg from "../../assets/logo.svg";
-import logo_admImg from "../../assets/logo_adm.svg";
+/* import logoImg from "../../assets/logo.svg";
+import logo_admImg from "../../assets/logo_adm.svg"; */
+import brandImg from "../../assets/mobile_brand.svg";
+import brandImgAdm from "../../assets/mobile_brand_admin.svg";
 
 import { FiLogOut, FiSearch, FiMenu } from "react-icons/fi"
+import { PiReceipt } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
-export function Header({ setSearch }) {
+export function Header({ setSearch, onOpenMenu }) {
 
   const { signOut, user } = useAuth();
 
   const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
 
-  const brand = isAdmin ? logo_admImg : logoImg;
+  const brand = isAdmin ? brandImgAdm : brandImg;
 
   const navigate = useNavigate();
 
@@ -40,9 +43,9 @@ export function Header({ setSearch }) {
 
   return (
     <Container>
-      <Menu>
+      <MenuButton onClick={onOpenMenu}>
         <FiMenu />
-      </Menu>
+      </MenuButton>
 
       <Brand>
         <img src={brand} alt="Logo do site" />
@@ -71,6 +74,16 @@ export function Header({ setSearch }) {
           <div className="btn">
             <Button title="Pedidos" isCustomer orderCount={0} />
           </div>
+      }
+
+      {
+        !isAdmin && (
+          <div className="btn-list">
+            <button>
+              <PiReceipt />
+              <span>0</span>
+            </button>
+          </div>)
       }
 
       <Logout onClick={handleLogout}>

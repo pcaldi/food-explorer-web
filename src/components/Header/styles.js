@@ -32,6 +32,10 @@ export const Container = styled.header`
     }
   }
 
+  .btn-list {
+    display: none;
+  }
+
   @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
       width: 100%;
       gap: 2rem;
@@ -53,8 +57,10 @@ export const Container = styled.header`
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
-      gap: 2rem;
-      padding: 2.4rem 3rem;
+     gap: 2rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
 
     > .fav {
       button {
@@ -69,6 +75,8 @@ export const Container = styled.header`
         padding: 2rem;
       }
     }
+
+
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
@@ -86,14 +94,41 @@ export const Container = styled.header`
         display: none;
       }
     }
+
+    .btn-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > button {
+        font-size: 2.8rem;
+        border: 0;
+        background: transparent;
+        color:  ${({ theme }) => theme.COLORS.WHITE};
+        position: relative;
+
+
+        > span {
+          background: ${({ theme }) => theme.COLORS.DARK_RED};
+          font-size: 1.2rem;
+          color: ${({ theme }) => theme.COLORS.WHITE};
+          border-radius: 50%;
+          position: absolute;
+          top: -2px;
+          right: 0;
+        }
+
+      }
+
+    }
   }
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
       /* max-width: 42.8rem;
       max-height: 11.4rem; */
-      gap: 2rem;
+      /* gap: 2rem;
       padding: 2.4rem 3rem;
-
+ */
     > .fav {
       button {
         display: none;
@@ -113,22 +148,19 @@ export const Brand = styled.div`
   display: flex;
   align-items: center;
 
-  > img {
-    width: 19.7rem;
-    height: 3.9rem;
-  }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
+ @media (max-width: ${DEVICE_BREAKPOINT.LG}) {
     > img {
-      width: 14.7rem;
-      height: 2.9rem;
+      width: 18rem;
     }
   }
 
-   @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
+  @media (max-width: ${DEVICE_BREAKPOINT.SM}) {
     > img {
-      width: 12.7rem;
-      height: 1.9rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-left: 2rem;
     }
   }
 `;
@@ -197,12 +229,23 @@ export const Logout = styled.button`
   }
 `;
 
-export const Menu = styled.button`
+export const MenuButton = styled.button`
   background: transparent;
   border: none;
 
-  svg {
+  > svg {
+    color:  ${({ theme }) => theme.COLORS.WHITE};
+    font-size: 2.4rem;
+  }
+
+   @media (min-width: ${DEVICE_BREAKPOINT.SM}) {
     display: none;
+
+    > svg {
+      display: none;
+    }
   }
 
 `;
+
+
