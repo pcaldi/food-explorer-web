@@ -14,6 +14,7 @@ import { Section } from "../../components/Section";
 import { Textarea } from "../../components/Textarea";
 import { FoodItem } from "../../components/FoodItem";
 import { ButtonText } from "../../components/ButtonText";
+import { DropMenu } from "../../components/DropMenu";
 
 import { api } from "../../services/api";
 
@@ -27,6 +28,7 @@ export function New() {
   const [imageFile, setImageFile] = useState("");
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const navigate = useNavigate();
 
@@ -108,7 +110,15 @@ export function New() {
 
   return (
     <Container>
-      <Header />
+      <Header
+        onOpenMenu={() => setMenuIsOpen(true)}
+      />
+
+      <DropMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
+
       <main>
         <header>
           <ButtonText onClick={handleBack}>
