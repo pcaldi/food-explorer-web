@@ -10,12 +10,14 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Favorite } from "../../components/Favorite";
 import { ButtonText } from "../../components/ButtonText";
+import { DropMenu } from "../../components/DropMenu";
 
 import { api } from "../../services/api";
 
 
 export function Favorites() {
   const [favorites, setFavorites] = useState([]);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   const navigate = useNavigate();
 
   function handleBack() {
@@ -58,7 +60,15 @@ export function Favorites() {
 
   return (
     <Container>
-      <Header />
+      <Header
+        onOpenMenu={() => setMenuIsOpen(true)}
+      />
+
+      <DropMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
+
       <main>
         <header>
           <h1>Meus Favoritos</h1>

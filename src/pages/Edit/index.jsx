@@ -16,6 +16,7 @@ import { FoodItem } from "../../components/FoodItem";
 import { ButtonText } from "../../components/ButtonText";
 
 import { api } from "../../services/api";
+import { DropMenu } from "../../components/DropMenu";
 
 export function Edit() {
   const [dish, setDish] = useState(null);
@@ -30,6 +31,7 @@ export function Edit() {
 
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const navigate = useNavigate();
   const params = useParams();
@@ -183,7 +185,14 @@ export function Edit() {
 
   return (
     <Container>
-      <Header />
+      <Header
+        onOpenMenu={() => setMenuIsOpen(true)}
+      />
+
+      <DropMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
       <main>
         <header>
           <ButtonText onClick={handleBack}>

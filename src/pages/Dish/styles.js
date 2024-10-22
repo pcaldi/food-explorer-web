@@ -83,14 +83,16 @@ export const Content = styled.div`
     }
   }
 
-  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     display: flex;
     flex-direction: column;
     margin-top: 1.5rem;
+    padding: 2rem;
 
     > img {
       width: 26.3rem;
       height: 26.3rem;
+      margin: 0 auto;
     }
 
     > div {

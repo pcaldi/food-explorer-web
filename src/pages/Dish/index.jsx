@@ -17,9 +17,11 @@ import foodPlaceholder from "../../assets/food_placeholder.svg";
 import { api } from "../../services/api";
 import { useAuth } from "../../hooks/auth";
 import { USER_ROLES } from "../../utils/roles";
+import { DropMenu } from "../../components/DropMenu";
 
 export function Dish() {
   const [data, setData] = useState(null);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   const { user } = useAuth();
   const params = useParams();
   const navigate = useNavigate()
@@ -49,7 +51,14 @@ export function Dish() {
 
   return (
     <Container>
-      <Header />
+      <Header
+        onOpenMenu={() => setMenuIsOpen(true)}
+      />
+
+      <DropMenu
+        menuIsOpen={menuIsOpen}
+        onCloseMenu={() => setMenuIsOpen(false)}
+      />
       {data &&
         <main>
 
