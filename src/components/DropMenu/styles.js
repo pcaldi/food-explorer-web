@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { DEVICE_BREAKPOINT } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.div`
 
@@ -12,19 +11,26 @@ export const Container = styled.div`
   "header"
   "content"
   "footer";
+
   flex-direction: column;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
   position: fixed;
-  z-index: 2;
+  z-index: 9999;
 
-  @media(min-width: ${DEVICE_BREAKPOINT.MD}) {
-    display: none;
+  overflow-y: hidden;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+
+  &[data-menu-is-open="true"] {
+    transform: translateX(0);
   }
 
   > header {
       grid-area: header;
+      width: 100%;
       display: flex;
       gap: 1.6rem;
       padding: 2.4rem;
@@ -57,14 +63,14 @@ export const Container = styled.div`
     flex-direction: column;
     padding: 2rem;
     gap: 2rem;
+    width: 100%;
 
     > button ,
     .btn {
       background: none;
       border: none;
-      width: 100%;
       text-align: left;
-
+      width: 90%;
       color: ${({ theme }) => theme.COLORS.GRAY_100};
       font-size: 2.4rem;
       font-weight: 400;
@@ -74,10 +80,14 @@ export const Container = styled.div`
 
     }
   }
+
+  > footer {
+    grid-area: footer;
+  }
+
 `;
 
 export const Search = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   height: 4rem;

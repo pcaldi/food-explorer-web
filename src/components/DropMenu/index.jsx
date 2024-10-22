@@ -1,23 +1,37 @@
+/* eslint-disable react/prop-types */
 import { Container, Search } from "./styles";
 
 import { FiSearch, FiX } from "react-icons/fi";
 
 import { Input } from "../Input";
+import { Footer } from "../Footer";
 
 import { USER_ROLES } from "../../utils/roles";
 
 import { useAuth } from "../../hooks/auth";
-import { Footer } from "../Footer";
+import { useNavigate } from "react-router-dom";
 
-export function DropMenu() {
+export function DropMenu({ menuIsOpen, onCloseMenu }) {
 
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   const isAdmin = [USER_ROLES.ADMIN].includes(user.role);
 
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    navigate("/");
+    signOut();
+  }
+
+  function handleNewPage() {
+    navigate("/new")
+  }
+
+
   return (
-    <Container>
+    <Container data-menu-is-open={menuIsOpen} >
       <header>
-        <button>
+        <button onClick={onCloseMenu}>
           <FiX />
         </button>
         <span>Menu</span>
@@ -33,17 +47,24 @@ export function DropMenu() {
         </Search>
 
         {isAdmin &&
-          <button className="btn">
+          <button
+            className="btn"
+            onClick={handleNewPage}
+          >
             Novo prato
           </button>
         }
 
-        <button>
+        <button onClick={handleLogout}>
           Sair
         </button>
+
       </main>
 
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
+
     </Container>
   )
 }
