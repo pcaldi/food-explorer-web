@@ -15,7 +15,7 @@ export const Container = styled.button`
   font-size: 2.4rem;
   font-weight: 700;
 
-  @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
+  @media (max-width: ${DEVICE_BREAKPOINT.MD}) {
     font-weight: 500;
   }
 

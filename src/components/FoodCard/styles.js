@@ -135,7 +135,6 @@ export const Title = styled.div`
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}) {
 
-
      > h3 {
       font-size: 1.2rem;
       line-height: 0;

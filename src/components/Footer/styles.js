@@ -37,9 +37,11 @@ export const Container = styled.footer`
 
   @media (max-width: ${DEVICE_BREAKPOINT.XS}){
     width: 100%;
-    gap: .8rem;
+    gap: .3rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 2.4rem .8rem;
   }
 
 
